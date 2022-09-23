@@ -10,14 +10,14 @@ import {
 import DeleteIcon from '@mui/icons-material/Delete'
 import Chart from './Chart'
 import Total from './Total'
-import AddCar from './AddCar'
+import AddCar from '../containers/AddCar'
  
 const Dashboard = (props) => {
     return (
         <Container maxWidth="lg" className="car-container">
             <h4>Welcome, {props.user.username}</h4>
             <div className="flex-container">
-                <Chart />
+                {/* <Chart /> */}
                 <Total />
                 <AddCar carTotal={props.cars.length} />
             </div>
