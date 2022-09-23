@@ -2,11 +2,16 @@ import React from 'react'
 import {PieChart} from 'react-minimal-pie-chart';
 
 const Chart = (props) => {
+    console.log(props)
+    let over= props.filter(function(props){if(props.horsepower>200){return props.horsepower}})
+    console.log(over)
+    let under=props.filter(props.horsepower>200)
     // create variable "over" with all the cars whose horsepower is >= 200
     // create variable "under" with all the cars whose horsepower is < 200
 
     return (
-        <div style={{ height: "100%" }}><PieChart 
+        <div style={{ height: "100%" }}>
+        <PieChart 
         style={{ width: "200px" }}
         // replace the "value" values with our "over" and "under" variables.
         data={[{ title: "Over", value: 16, color: "#C13C37" },
